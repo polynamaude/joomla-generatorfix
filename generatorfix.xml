@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.1" type="plugin" group="system" method="upgrade">
+	<name>System - Generator Fix Plugin</name>
+	<author>Polyna-Maude R.-Summerside</author>
+	<creationDate>January 2018</creationDate>
+	<copyright>Copyright (c) 2017-2018 Polyna-Maude R.-Summerside. All rights reserved</copyright>
+	<license>Use restricted, no copy allowed</license>
+	<authorEmail>me@polynamaude.com</authorEmail>
+	<authorUrl>www.polynamaude.com</authorUrl>
+	<version>0.6</version>
+	<description>PLG_SYSTEM_GENERATORFIX_XML_DESC</description>
+	<files>
+		<filename plugin="generatorfix">generatorfix.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="fr-CA">fr-CA/fr-CA.plg_system_generatorfix.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.plg_system_generatorfix.sys.ini</language>
+		<language tag="en-US">en-US/en-US.plg_system_generatorfix.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_generatorfix.sys.ini</language>
+	</languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic"
+		label="PLG_SYSTEM_GENERATORFIX_PARAMS_LABEL"
+		>
+			<field name="generateempty" type="list"
+				description="PLG_SYSTEM_GENERATORFIX_FIELD_EMPTY_DESC"
+				label="PLG_SYSTEM_GENERATORFIX_FIELD_EMPTY_LABEL"
+				default="1">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			<field name="generatorstring" type="text"
+				description="PLG_SYSTEM_GENERATORFIX_FIELD_STRING_DESC"
+				label="PLG_SYSTEM_GENERATORFIX_FIELD_STRING_LABEL"
+				size="25"
+				showon="generateempty:0"
+				/>
+		</fieldset>
+	</fields>
+	</config>
+</extension>
